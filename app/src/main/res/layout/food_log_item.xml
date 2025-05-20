@@ -26,6 +26,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:text="this is the description... words words words words fjodavihfdkvyapivuhdkvjodiuvydknfvadlkshvawilufhjdkv"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.48"
@@ -34,9 +35,9 @@
 
     <ImageView
         android:id="@+id/imageView_foodEntry"
-        android:layout_width="117dp"
-        android:layout_height="104dp"
-        android:layout_marginTop="4dp"
+        android:layout_width="103dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.626"
         app:layout_constraintStart_toEndOf="@+id/textView_recipeName"
