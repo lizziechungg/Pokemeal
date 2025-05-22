@@ -48,6 +48,7 @@ class PackDetailActivity : AppCompatActivity() {
                 else -> false
             }
         }
+        // testing out a change on github
 
 
     }
