@@ -1,4 +1,4 @@
-package com.example.timewellspent
+package com.example.pokemeal
 
 import android.app.Activity
 import android.content.Intent
@@ -15,6 +15,7 @@ import com.backendless.exceptions.BackendlessFault
 
 import com.example.pokemeal.PackListActivity
 import com.example.pokemeal.databinding.ActivityLoginBinding
+import com.example.timewellspent.RegistrationActivity
 
 
 class LoginActivity : AppCompatActivity() {
@@ -61,7 +62,7 @@ class LoginActivity : AppCompatActivity() {
                             "$(user?.userId) has logged in", Toast.LENGTH_SHORT).show()
                         val gameListIntent = Intent(this@LoginActivity, PackListActivity::class.java)
                         gameListIntent.putExtra(EXTRA_USER_ID, user?.userId)
-                        startActivity(packListIntent)
+                        startActivity(gameListIntent)
                     }
 
                     override fun handleFault(fault: BackendlessFault) {
