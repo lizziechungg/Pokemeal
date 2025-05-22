@@ -13,9 +13,8 @@ import com.backendless.BackendlessUser
 import com.backendless.async.callback.AsyncCallback
 import com.backendless.exceptions.BackendlessFault
 
-import com.example.timewellspent.GameEntry
-import com.example.timewellspent.PackListActivity
-import com.example.timewellspent.databinding.ActivityLoginBinding
+import com.example.pokemeal.PackListActivity
+import com.example.pokemeal.databinding.ActivityLoginBinding
 
 
 class LoginActivity : AppCompatActivity() {
