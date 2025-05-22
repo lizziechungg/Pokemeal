@@ -2,17 +2,20 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/dashboard"
-        android:title="Dashboard"
-        android:icon="@drawable/circle"/>
+        android:id="@+id/packs"
+        android:title="Packs"
+        android:icon="@drawable/circle"
+        android:iconTint="@color/white"/>
     <item
-        android:id="@+id/home"
-        android:title="Home"
-        android:icon="@drawable/star"/>
+        android:id="@+id/recipes"
+        android:title="Recipes"
+        android:icon="@drawable/star"
+        android:iconTint="@color/white"/>
 
     <item
-        android:id="@+id/about"
-        android:title="About"
-        android:icon="@drawable/square"/>
+        android:id="@+id/foodLog"
+        android:title="Food Log"
+        android:icon="@drawable/square"
+        android:iconTint="@color/white"/>
 
 </menu>
