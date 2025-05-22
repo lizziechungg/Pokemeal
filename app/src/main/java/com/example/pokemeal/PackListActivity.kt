@@ -22,8 +22,6 @@ class PackListActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.selectedItemId = R.id.packs
-        bottomNavigationView.selectedItemId = R.id.recipes
-        bottomNavigationView.selectedItemId = R.id.foodLog
         // Perform item selected listener
         bottomNavigationView.setOnItemSelectedListener { item ->
             val id = item.itemId
