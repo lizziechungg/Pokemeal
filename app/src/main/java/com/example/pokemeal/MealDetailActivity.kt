@@ -54,7 +54,7 @@ class MealDetailActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.recipes -> {
+                R.id.meals -> {
                     startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
