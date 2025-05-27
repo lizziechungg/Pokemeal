@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.pokemeal.databinding.ActivityPackDetailBinding
+import com.example.pokemeal.databinding.ActivityPackListBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class PackDetailActivity : AppCompatActivity() {
