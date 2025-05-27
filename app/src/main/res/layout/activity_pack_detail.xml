@@ -8,7 +8,7 @@
     tools:context=".PackDetailActivity">
 
     <TextView
-        android:id="@+id/textView_recipe_instructionsTitle"
+        android:id="@+id/textView_recipe_instructionsTitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
@@ -68,7 +68,7 @@
         tools:layout_editor_absoluteY="422dp" />
 
     <TextView
-        android:id="@+id/textView_recipe_instructionsTitle"
+        android:id="@+id/textView_recipe_instructionsTitle2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="18dp"
