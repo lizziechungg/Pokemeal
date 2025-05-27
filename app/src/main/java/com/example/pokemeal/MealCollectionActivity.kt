@@ -6,16 +6,15 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.example.pokemeal.databinding.ActivityPackListBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class PackCollectionActivity : AppCompatActivity() {
+class MealCollectionActivity : AppCompatActivity() {
     private lateinit var bottomNavigationView: BottomNavigationView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_collection)
+        setContentView(R.layout.activity_meal_list)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.collection)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
@@ -38,7 +37,7 @@ class PackCollectionActivity : AppCompatActivity() {
                 }
 
                 R.id.recipes -> {
-                    startActivity(Intent(applicationContext, PackCollectionActivity::class.java))
+                    startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }

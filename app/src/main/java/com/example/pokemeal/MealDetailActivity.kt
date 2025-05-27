@@ -1,6 +1,5 @@
 package com.example.pokemeal
 
-import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
 import android.webkit.WebChromeClient
@@ -10,7 +9,6 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.pokemeal.databinding.ActivityMealDetailBinding
-import com.example.pokemeal.databinding.ActivityPackDetailBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MealDetailActivity : AppCompatActivity() {
@@ -57,7 +55,7 @@ class MealDetailActivity : AppCompatActivity() {
                 }
 
                 R.id.recipes -> {
-                    startActivity(Intent(applicationContext, PackCollectionActivity::class.java))
+                    startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }

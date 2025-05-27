@@ -16,5 +16,9 @@
         app:itemTextColor="@drawable/selector"
         app:menu="@menu/menu_nav" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
 </RelativeLayout>
 

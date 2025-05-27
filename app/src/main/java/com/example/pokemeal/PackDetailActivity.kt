@@ -2,7 +2,6 @@ package com.example.pokemeal
 
 import android.content.Intent
 import android.os.Bundle
-import android.webkit.WebChromeClient
 import android.webkit.WebView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -45,7 +44,7 @@ class PackDetailActivity : AppCompatActivity() {
                 }
 
                 R.id.recipes -> {
-                    startActivity(Intent(applicationContext, PackCollectionActivity::class.java))
+                    startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }

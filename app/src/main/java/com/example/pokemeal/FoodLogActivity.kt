@@ -34,7 +34,7 @@ class FoodLogActivity : AppCompatActivity() {
                 }
 
                 R.id.recipes -> {
-                    startActivity(Intent(applicationContext, PackCollectionActivity::class.java))
+                    startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }

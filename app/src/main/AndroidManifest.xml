@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".PackDetailActivity"/>
-        <activity android:name=".PackCollectionActivity"/>
+        <activity android:name=".MealCollectionActivity"/>
         <activity android:name=".FoodLogActivity"/>
     </application>
 
