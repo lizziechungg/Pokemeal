@@ -4,18 +4,15 @@
     <item
         android:id="@+id/packs"
         android:title="Packs"
-        android:icon="@drawable/circle"
-        android:iconTint="@color/white"/>
+        android:icon="@drawable/circle"/>
     <item
         android:id="@+id/recipes"
         android:title="Recipes"
-        android:icon="@drawable/star"
-        android:iconTint="@color/white"/>
+        android:icon="@drawable/star"/>
 
     <item
         android:id="@+id/foodLog"
         android:title="Food Log"
-        android:icon="@drawable/square"
-        android:iconTint="@color/white"/>
+        android:icon="@drawable/square"/>
 
 </menu>
