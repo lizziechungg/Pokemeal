@@ -90,6 +90,7 @@
         tools:layout_editor_absoluteY="185dp" />
 
     <WebView
+        android:id="@+id/webView_packDetail"
         android:layout_width="431dp"
         android:layout_height="249dp"
         app:layout_constraintEnd_toEndOf="parent"

@@ -6,10 +6,13 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.pokemeal.databinding.ActivityPackListBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class PackCollectionActivity : AppCompatActivity() {
     private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var binding: ActivityPackListBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -19,6 +22,7 @@ class PackCollectionActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.selectedItemId = R.id.recipes
