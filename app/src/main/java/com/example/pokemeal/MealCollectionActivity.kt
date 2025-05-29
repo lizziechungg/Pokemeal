@@ -23,7 +23,7 @@ class MealCollectionActivity : AppCompatActivity() {
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        bottomNavigationView.selectedItemId = R.id.recipes
+        bottomNavigationView.selectedItemId = R.id.meals
 
         // Perform item selected listener
         bottomNavigationView.setOnItemSelectedListener { item ->
@@ -36,7 +36,7 @@ class MealCollectionActivity : AppCompatActivity() {
                     true
                 }
 
-                R.id.recipes -> {
+                R.id.meals -> {
                     startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
                     overridePendingTransition(0, 0)
                     true

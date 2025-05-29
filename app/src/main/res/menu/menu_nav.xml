@@ -6,8 +6,8 @@
         android:title="Packs"
         android:icon="@drawable/circle"/>
     <item
-        android:id="@+id/recipes"
-        android:title="Recipes"
+        android:id="@+id/meals"
+        android:title="Meals"
         android:icon="@drawable/star"/>
 
     <item
