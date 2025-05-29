@@ -16,6 +16,10 @@ class MealDetailActivity : AppCompatActivity() {
     private lateinit var webView: WebView
     private lateinit var binding: ActivityMealDetailBinding
 
+    companion object {
+        val EXTRA_MEAL = "meal"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -27,12 +31,12 @@ class MealDetailActivity : AppCompatActivity() {
             insets
         }
 
-        val meal = intent.getParcelableExtra<>()
+        val meal = intent.getParcelableExtra<Meal>(EXTRA_MEAL)
 
-        binding.textViewRecipeName.setText(meal.text)
-        binding.textViewRecipeArea.setText(meal.area)
-        binding.textViewRecipeType.setText(meal.type)
-        binding.textViewRecipeInstructions.setText(meal.instructions)
+        binding.textViewRecipeName.setText(meal?.strMeal)
+        binding.textViewRecipeArea.setText(meal?.strArea)
+        binding.textViewRecipeType.setText(meal?.strCategory)
+        binding.textViewRecipeInstructions.setText(meal?.strInstructions)
 
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
