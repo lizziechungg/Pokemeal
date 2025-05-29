@@ -1,54 +1,42 @@
 package com.example.pokemeal
 
-import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.pokemeal.databinding.ActivityPackListBinding
+import com.google.gson.Gson
 
 class PackListActivity : AppCompatActivity() {
-    private lateinit var bottomNavigationView: BottomNavigationView
+    private lateinit var binding: ActivityPackListBinding
+    private lateinit var adapter: PackListAdapter
+
+    companion object {
+        val TAG = "Pack List Activity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_pack_list)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.pack_list)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+        binding = ActivityPackListBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        var gson = Gson()
+        val inputStream = resources.openRawResource(R.raw.packs)
+        val jsonString = inputStream.bufferedReader().use {
+            it.readText()
         }
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        bottomNavigationView.selectedItemId = R.id.packs
-        // Perform item selected listener
-        bottomNavigationView.setOnItemSelectedListener { item ->
-            val id = item.itemId
-
-            when (id) {
-                R.id.packs -> {
-                    startActivity(Intent(applicationContext, PackListActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
-
-                R.id.recipes -> {
-                    startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
-                R.id.foodLog -> {
-                    startActivity(Intent(applicationContext, FoodLogActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
-
-                else -> false
-            }
-        }
+        val jsonData = gson.fromJson(jsonString, PackTypes::class.java)
+        Log.d(TAG, "onResponse: ${jsonData}")
 
 
+        adapter = PackListAdapter(jsonData.types)
+        binding.recyclerViewPacklistCards.adapter = adapter
+        binding.recyclerViewPacklistCards.layoutManager =
+            GridLayoutManager(this@PackListActivity, 2)
 
 
     }

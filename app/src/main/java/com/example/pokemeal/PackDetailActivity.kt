@@ -1,65 +1,40 @@
 package com.example.pokemeal
 
 import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
-import android.webkit.WebView
-import androidx.activity.enableEdgeToEdge
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
+import androidx.core.content.res.TypedArrayUtils.getResourceId
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.pokemeal.databinding.ActivityPackDetailBinding
-import com.example.pokemeal.databinding.ActivityPackListBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class PackDetailActivity : AppCompatActivity() {
-    private lateinit var bottomNavigationView: BottomNavigationView
-    private lateinit var webView: WebView
+class PackDetailActivity: AppCompatActivity() {
+    companion object {
+        val EXTRA_PACK = "pack"
+    }
     private lateinit var binding: ActivityPackDetailBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
         binding = ActivityPackDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.activity_pack_detail)) { v, insets ->
-            val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
-            insets
+
+        val pack = intent.getParcelableExtra<PackType>(EXTRA_PACK)
+
+
+        // pokemon types
+        binding.imageViewPackImage.setImageDrawable(getDrawable(resources.getIdentifier(pack?.resourceId, "drawable", packageName)))
+
+        binding.imageViewPackImage.setOnClickListener{
+            val context = binding.imageViewPackImage.context
+            val detailIntent = Intent(context, PackOpenActivity::class.java)
+            detailIntent.putExtra(PackOpenActivity.EXTRA_PACK, pack)
+            context.startActivity(detailIntent)
         }
-
-
-
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        bottomNavigationView.selectedItemId = R.id.packs
-
-        // Perform item selected listener
-        bottomNavigationView.setOnItemSelectedListener { item ->
-            val id = item.itemId
-
-            when (id) {
-                R.id.packs -> {
-                    startActivity(Intent(applicationContext, PackListActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
-
-                R.id.recipes -> {
-                    startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
-                R.id.foodLog -> {
-                    startActivity(Intent(applicationContext, FoodLogActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
-
-                else -> false
-            }
-        }
-
 
 
     }
+
 }

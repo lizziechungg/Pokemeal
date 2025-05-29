@@ -1,0 +1,116 @@
+{
+  "types": [
+    {
+      "name": "American",
+      "resourceId": "american"
+    },
+    {
+      "name": "British",
+      "resourceId": "british"
+    },
+    {
+      "name": "Canadian",
+      "resourceId": "canadian"
+    },
+    {
+      "name": "Chinese",
+      "resourceId": "chinese"
+    },
+    {
+      "name": "Croatian",
+      "resourceId": "croatian"
+    },
+    {
+      "name": "Dutch",
+      "resourceId": "dutch"
+    },
+    {
+      "name": "Egyptian",
+      "resourceId": "egyptian"
+    },
+    {
+      "name": "Filipino",
+      "resourceId": "filipino"
+    },
+    {
+      "name": "French",
+      "resourceId": "french"
+    },
+    {
+      "name": "Indian",
+      "resourceId": "indian"
+    },
+    {
+      "name": "Irish",
+      "resourceId": "irish"
+    },
+    {
+      "name": "Italian",
+      "resourceId": "italian"
+    },
+    {
+      "name": "Jamaican",
+      "resourceId": "jamaican"
+    },
+    {
+      "name": "Japanese",
+      "resourceId": "japanese"
+    },
+    {
+      "name": "Kenyan",
+      "resourceId": "kenyan"
+    },
+    {
+      "name": "Malaysian",
+      "resourceId": "malaysian"
+    },
+    {
+      "name": "Mexican",
+      "resourceId": "mexican"
+    },
+    {
+      "name": "Moroccan",
+      "resourceId": "moroccan"
+    },
+    {
+      "name": "Polish",
+      "resourceId": "polish"
+    },
+    {
+      "name": "Portuguese",
+      "resourceId": "portuguese"
+    },
+    {
+      "name": "Russian",
+      "resourceId": "russian"
+    },
+    {
+      "name": "Spanish",
+      "resourceId": "spanish"
+    },
+    {
+      "name": "Thai",
+      "resourceId": "thai"
+    },
+    {
+      "name": "Tunisian",
+      "resourceId": "tunisian"
+    },
+    {
+      "name": "Turkish",
+      "resourceId": "turkish"
+    },
+    {
+      "name": "Ukrainian",
+      "resourceId": "ukrainian"
+    },
+    {
+      "name": "Uruguayan",
+      "resourceId": "uruguayan"
+    },
+    {
+      "name": "Vietnamese",
+      "resourceId": "vietnamese"
+    }
+  ]
+}
