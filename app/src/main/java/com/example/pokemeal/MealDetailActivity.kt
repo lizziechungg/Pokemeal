@@ -34,15 +34,6 @@ class MealDetailActivity : AppCompatActivity() {
         binding.textViewRecipeType.setText(meal.type)
         binding.textViewRecipeInstructions.setText(meal.instructions)
 
-        webView = findViewById(R.id.webView_packDetail)
-
-        val ytEmbed = meal.youtube.replace("/watch?v=", "/embed/")
-        val video = "<iframe width=\"100%\" height=\"100%\" src=" + ytEmbed + "V2KCAfHjySQ?si=fiPr9NIYZas2CTN3 \" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>"
-
-        webView.loadData(video,"text/html", "utf-8")
-        webView.getSettings().javaScriptEnabled = true
-        webView.webChromeClient = WebChromeClient()
-
         bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         bottomNavigationView.selectedItemId = R.id.packs
