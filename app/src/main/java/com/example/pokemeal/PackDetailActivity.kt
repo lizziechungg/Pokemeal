@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.example.pokemeal.databinding.ActivityPackDetailBinding
+import com.example.pokemeal.databinding.ActivityPackListBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class PackDetailActivity : AppCompatActivity() {
@@ -26,37 +27,37 @@ class PackDetailActivity : AppCompatActivity() {
             insets
         }
 
-
-
-        bottomNavigationView = findViewById(R.id.bottom_navigation);
-
-        bottomNavigationView.selectedItemId = R.id.packs
-
-        // Perform item selected listener
-        bottomNavigationView.setOnItemSelectedListener { item ->
-            val id = item.itemId
-
-            when (id) {
-                R.id.packs -> {
-                    startActivity(Intent(applicationContext, PackListActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
-
-                R.id.meals -> {
-                    startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
-                R.id.foodLog -> {
-                    startActivity(Intent(applicationContext, FoodLogActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
-
-                else -> false
-            }
-        }
+//
+//
+//        bottomNavigationView = findViewById(R.id.bottom_navigation);
+//
+//        bottomNavigationView.selectedItemId = R.id.packs
+//
+//        // Perform item selected listener
+//        bottomNavigationView.setOnItemSelectedListener { item ->
+//            val id = item.itemId
+//
+//            when (id) {
+//                R.id.packs -> {
+//                    startActivity(Intent(applicationContext, PackListActivity::class.java))
+//                    overridePendingTransition(0, 0)
+//                    true
+//                }
+//
+//                R.id.recipes -> {
+//                    startActivity(Intent(applicationContext, MealCollectionActivity::class.java))
+//                    overridePendingTransition(0, 0)
+//                    true
+//                }
+//                R.id.foodLog -> {
+//                    startActivity(Intent(applicationContext, FoodLogActivity::class.java))
+//                    overridePendingTransition(0, 0)
+//                    true
+//                }
+//
+//                else -> false
+//            }
+//        }
 
 
 

@@ -1,4 +1,4 @@
-package com.example.timewellspent
+package com.example.pokemeal
 
 import android.app.Activity
 import android.content.Intent
@@ -10,8 +10,8 @@ import com.backendless.Backendless
 import com.backendless.BackendlessUser
 import com.backendless.async.callback.AsyncCallback
 import com.backendless.exceptions.BackendlessFault
-import com.example.pokemeal.LoginActivity
 import com.example.pokemeal.databinding.ActivityRegistrationBinding
+import com.example.pokemeal.LoginActivity
 
 
 class RegistrationActivity : AppCompatActivity() {
@@ -58,6 +58,7 @@ class RegistrationActivity : AppCompatActivity() {
                         intent.putExtra(LoginActivity.EXTRA_USERNAME, username)
                         intent.putExtra(LoginActivity.EXTRA_PASSWORD, password)
                         setResult(RESULT_OK, intent)
+                        Log.d("Registration Activity", "Registered!")
                         finish()
                     }
 

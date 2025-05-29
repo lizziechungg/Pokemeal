@@ -12,10 +12,11 @@ import com.backendless.Backendless
 import com.backendless.BackendlessUser
 import com.backendless.async.callback.AsyncCallback
 import com.backendless.exceptions.BackendlessFault
+import com.example.pokemeal.FoodLogActivity
 
 import com.example.pokemeal.PackListActivity
+import com.example.pokemeal.RegistrationActivity
 import com.example.pokemeal.databinding.ActivityLoginBinding
-import com.example.timewellspent.RegistrationActivity
 
 
 class LoginActivity : AppCompatActivity() {
@@ -60,14 +61,14 @@ class LoginActivity : AppCompatActivity() {
                     override fun handleResponse(user: BackendlessUser?) {
                         Toast.makeText(this@LoginActivity,
                             "$(user?.userId) has logged in", Toast.LENGTH_SHORT).show()
-                        val gameListIntent = Intent(this@LoginActivity, PackListActivity::class.java)
-                        gameListIntent.putExtra(EXTRA_USER_ID, user?.userId)
-                        startActivity(gameListIntent)
+                        val foodLogIntent = Intent(this@LoginActivity, FoodLogActivity::class.java)
+                        foodLogIntent.putExtra(EXTRA_USER_ID, user?.userId)
+                        startActivity(foodLogIntent)
                     }
 
                     override fun handleFault(fault: BackendlessFault) {
                         Toast.makeText(this@LoginActivity,
-                            "$(fault.message)", Toast.LENGTH_SHORT).show()
+                            "${fault.message}", Toast.LENGTH_SHORT).show()
                     }
                 }
             )
