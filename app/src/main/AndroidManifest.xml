@@ -25,10 +25,11 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
-        <activity android:name=".PackListActivity"/>
         <activity android:name=".RegistrationActivity"/>
+        <activity android:name=".PackListActivity"/>
         <activity android:name=".PackDetailActivity"/>
         <activity android:name=".PackOpenActivity"/>
+        <activity android:name=".MealDetailActivity"/>
         <activity android:name=".MealCollectionActivity"/>
         <activity android:name=".FoodLogActivity"/>
     </application>

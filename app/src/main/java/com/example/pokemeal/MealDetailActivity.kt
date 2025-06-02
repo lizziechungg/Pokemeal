@@ -32,6 +32,8 @@ class MealDetailActivity : AppCompatActivity() {
         }
 
         val meal = intent.getParcelableExtra<Meal>(EXTRA_MEAL)
+        val userId = intent.getStringExtra(LoginActivity.EXTRA_USER_ID)
+
 
         binding.textViewRecipeName.setText(meal?.strMeal)
         binding.textViewRecipeArea.setText(meal?.strArea)

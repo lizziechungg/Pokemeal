@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.gson)
     implementation(libs.androidx.gridlayout)
     implementation(libs.picasso)
+    implementation(libs.backendless)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

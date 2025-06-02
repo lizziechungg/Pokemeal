@@ -61,7 +61,7 @@ class LoginActivity : AppCompatActivity() {
                     override fun handleResponse(user: BackendlessUser?) {
                         Toast.makeText(this@LoginActivity,
                             "$(user?.userId) has logged in", Toast.LENGTH_SHORT).show()
-                        val foodLogIntent = Intent(this@LoginActivity, FoodLogActivity::class.java)
+                        val foodLogIntent = Intent(this@LoginActivity, MealCollectionActivity::class.java)
                         foodLogIntent.putExtra(EXTRA_USER_ID, user?.userId)
                         startActivity(foodLogIntent)
                     }

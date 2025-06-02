@@ -2,6 +2,7 @@ package com.example.pokemeal
 
 import android.content.Context
 import android.content.Intent
+import android.content.Intent.EXTRA_USER
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,7 +11,7 @@ import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
-class PackListAdapter (var types: List<PackType>):
+class PackListAdapter (var types: List<PackType>, var userId: String?):
     RecyclerView.Adapter<PackListAdapter.ViewHolder>() {
 
     class ViewHolder(view: View) : RecyclerView.ViewHolder(view){
@@ -42,6 +43,7 @@ class PackListAdapter (var types: List<PackType>):
             val context = viewHolder.layout.context
             val detailIntent = Intent(context, PackDetailActivity::class.java)
             detailIntent.putExtra(PackDetailActivity.EXTRA_PACK, packType)
+            detailIntent.putExtra(PackDetailActivity.EXTRA_USER_ID, userId)
             context.startActivity(detailIntent)
         }
     }
